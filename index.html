@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="house1.png">
+<title>Real Estate Price Prediction</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="house1.png" alt="Premium Real Estate Developers">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#prediction">Prediction</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="hero-content">
+    <h1>Real Estate Price Prediction</h1>
+    <p>Your reliable partner in property value forecasting</p>
+    <div class="triangle"></div>
+  </div>
+</section>
+
+<section id="prediction" class="prediction">
+    <div class="hero-image"></div>
+    <section class="form-container">
+        <form id="predictionForm" class="predictionForm" action="/predict" method="post">
+            <!-- <div class="form-group" id="locationGroup">
+                <label for="location">Location:</label>
+                <select id="location" name="location" required onchange="showNextInput('ageGroup')">
+                    <option value="">Select a Location</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="tanzania">Tanzania</option>
+                    <option value="sudan">Sudan</option>
+                    <option value="somalia">Somalia</option>
+                    <option value="egypt">Egypt</option>
+                </select>
+            </div> -->
+            <div class="form-group" id="longitudeGroup">
+              <label for="housing_median_age">longitude:</label>
+              <input type="number" id="longitude" name="longitude" required>
+          </div>
+          <div class="form-group" id="latitudeGroup">
+            <label for="housing_median_age">latitude:</label>
+            <input type="number" id="latitude" name="latitude" required>
+        </div>
+            <div class="form-group" id="ageGroup">
+                <label for="housing_median_age">Housing Median Age:</label>
+                <input type="number" id="housing_median_age" name="housing_median_age" required>
+            </div>
+            <div class="form-group" id="roomsGroup">
+                <label for="total_rooms">Total Rooms:</label>
+                <input type="number" id="total_rooms" name="total_rooms" required>
+            </div>
+            <div class="form-group" id="bedroomsGroup">
+                <label for="total_bedrooms">Total Bedrooms:</label>
+                <input type="number" id="total_bedrooms" name="total_bedrooms" required>
+            </div>
+            <div class="form-group" id="populationGroup">
+                <label for="population">Population:</label>
+                <input type="number" id="population" name="population" required>
+            </div>
+            <div class="form-group" id="householdsGroup">
+                <label for="households">Households:</label>
+                <input type="number" id="households" name="households" required>
+            </div>
+            <div class="form-group" id="incomeGroup">
+                <label for="median_income">Median Income:</label>
+                <input type="number" id="median_income" name="median_income" required>
+            </div>
+        
+            <div class="form-group" id="oceanProximityGroup">
+                <label for="ocean_proximity">Ocean Proximity:</label>
+                <select id="ocean_proximity" name="ocean" required>
+                    <option value="">Select a Ocean Proximity</option>
+                    <option value="NEAR BAY">NEAR BAY</option>
+                    <option value="<1H OCEAN">1H OCEAN</option>
+                    <option value="INLAND">INLAND</option>
+                    <option value="NEAR OCEAN">NEAR OCEAN</option>
+                    <option value="ISLAND">ISLAND</option>
+                </select>
+            </div>
+            <div class="form-group" id="button">
+                <button type="submit" id="submitBtn">Predict Value</button>
+            </div>
+            
+        </form>
+
+        <div class="result">
+          {% if prediction_text %}
+              Estate value: {{ prediction_text }}
+          {% else %}
+              No prediction available.
+          {% endif %}
+      </div>
+         
+    </section>
+    
+</section>
+
+<footer id="contact">
+  <div class="footer-content">
+    <p>Dedan Kimathi University, Nyeri, Kenya</p>
+    <p>Email: purpleworld@gmail.com</p>
+    <p>Phone: +254 114570611</p>
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007bff;
+    color: white;
+    margin: 0;
+}
+
+.logo img {
+    width: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero-content h1 {
+    color: rgb(255, 238, 0);
+}
+.prediction{
+    height: 150vh;
+}
+.hero-image {
+    background-image: url("../images/house.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 120, 255, 0.432);
+    z-index: -1;
+}
+
+.form-container {
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(4, 42, 255, 0.411);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: auto;
+    width: 80%;
+    max-width: 960px;
+    z-index: 2;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-group label {
+    flex-basis: 20%;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.form-group input, .form-group select {
+    flex-basis: 80%;
+    padding: 15px 12px;
+    font-size: 16px;
+    border: 1px solid #1100ff;
+    border-radius: 5px;
+    color: #383838;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.result {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: rgb(255, 238, 0);
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #0056b3;
+    width: 40%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+footer {
+    background-color: #0056b3; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    font-size: 16px;
+    padding: 20px 0; /* Padding around the content */
+    text-align: center; /* Center align the text */
+}
+/* .footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+} */
+
+.footer-content p {
+    margin: 10px 0; /* Spacing between paragraphs */
+}
+
+.social-media {
+    margin-top: 20px; /* Space above the social media links */
+    display: flex;
+    justify-content: center; /* Center align the icons */
+    align-items: center;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px; /* Horizontal spacing between icons */
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s;
+}
+
+.social-media i:hover {
+    color: #ff9100; /* Color change on hover */
+}
+
+.social-media i {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-around; /* Distribute space between elements */
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+    
+    .form-container {
+        top: 100%; /* Adjust top position */
+        transform: translate(-50%, -10%);
+    }
+
+    .hero-content h1 {
+        font-size: 32px; /* Larger font size for larger screens */
+    }
+    
+    nav ul li {
+        margin-right: 20px;
+        width: auto; /* Auto width for navigation links */
+    }
+    .prediction{
+        height: 80vh;
+    }
+
+    .form-container {
+        top: 65%;
+        left: 50%;
+        padding: 20px;
+        max-width: 100%;
+        left: 5%; /* Adjusts the form to be more responsive */
+        transform: translate(0, -50%);
+    }
+
+    .form-group input, .form-group select {
+        width: 100%; /* Stack inputs vertically on smaller screens */
+        display: block;
+    }
+}
