@@ -168,9 +168,18 @@ footer {
     color: white;
 }
 
+.menu-toggle {
+    display: none; /* Initially hidden on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     header {
-        justify-content: space-around; /* Distribute space between elements */
+        justify-content: space-between; /* Distribute space between elements */
         max-width: 100%;
         width: 100%;
     }
@@ -212,5 +221,37 @@ footer {
 
     .footer{
         margin: 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on small screens */
+        margin-right: 30px;
+        background-color: #007bff;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        background-color: #0056b3;
+        width: 40%;
+        left: -100%; /* Initially off-screen */
+        top: 0;
+        margin: auto;
+        padding: 20px 0;
+        transition: left 0.3s;
+        border-radius: 12px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav ul li{
+        padding: 12px;
+        border-bottom: #007bff solid 1px;
+        width: 100%;
+    }
+
+    nav ul.active {
+        left: 0; /* When active, slide in */
     }
 }
