@@ -21,6 +21,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <button id="menu-toggle" class="menu-toggle">☰</button>
 </header>
 
 <section id="home">
@@ -125,3 +126,14 @@
 
 </body>
 </html>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+      var nav = document.querySelector('nav ul');
+      if (nav.classList.contains('active')) {
+          nav.classList.remove('active');
+      } else {
+          nav.classList.add('active');
+      }
+  });
+</script>
