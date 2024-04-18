@@ -43,7 +43,7 @@ nav ul li a {
     height: 150vh;
 }
 .hero-image {
-    background-image: url("../images/house.png");
+    background-image: url("house.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
